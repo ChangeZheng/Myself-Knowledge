@@ -1,4 +1,4 @@
-package basic;
+package DataStructure;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -10,13 +10,13 @@ import java.util.ArrayList;
 public class SparseArray {
 
 	public static void main(String[] args) throws Exception {
-		// 1.´´½¨Ò»¸ö11*11µÄ¶þÎ¬Êý×é£¬²¢³õÊ¼»¯£¬ÓÃÓÚ´æ´¢ÆåÅÌ¾ØÕó
+		// 1.ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½11*11ï¿½Ä¶ï¿½Î¬ï¿½ï¿½ï¿½é£¬ï¿½ï¿½ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú´æ´¢ï¿½ï¿½ï¿½Ì¾ï¿½ï¿½ï¿½
 		int[][] sparseArr = new int[11][11];
-		// 1´ú±íºÚ×Ó£¬2´ú±í°××Ó
+		// 1ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó£ï¿½2ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		sparseArr[1][4] = 1;
 		sparseArr[2][5] = 2;
-		// ´òÓ¡
-		System.out.println("¶þÎ¬Êý×éÎª£º");
+		// ï¿½ï¿½Ó¡
+		System.out.println("ï¿½ï¿½Î¬ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½");
 		for (int[] is : sparseArr) {
 			for (int i : is) {
 				System.out.printf("%d\t", i);
@@ -24,8 +24,8 @@ public class SparseArray {
 			System.out.println();
 		}
 
-		// 2.½«¶þÎ¬Êý×é×ª»»ÎªÏ¡ÊèÊý×é
-		// 1)±éÀú¶þÎ¬Êý×é£ºÈ·¶¨¡°Æå×Ó¡±¸öÊý
+		// 2.ï¿½ï¿½ï¿½ï¿½Î¬ï¿½ï¿½ï¿½ï¿½×ªï¿½ï¿½ÎªÏ¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		// 1)ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î¬ï¿½ï¿½ï¿½é£ºÈ·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó¡ï¿½ï¿½ï¿½ï¿½ï¿½
 		int sum = 0;
 		for (int i = 0; i < sparseArr.length; i++) {
 			for (int j = 0; j < sparseArr.length; j++) {
@@ -33,27 +33,27 @@ public class SparseArray {
 					sum++;
 			}
 		}
-		// 2)³õÊ¼»¯Ï¡ÊèÊý×énewArr[sum+1][3]
+		// 2)ï¿½ï¿½Ê¼ï¿½ï¿½Ï¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½newArr[sum+1][3]
 		int[][] newArr = new int[sum + 1][3];
 		newArr[0][0] = sparseArr.length;
 		newArr[0][1] = sparseArr.length;
 		newArr[0][2] = sum;
-		// 3)±éÀúÔ­Êý×é£¬¸øÏ¡ÊèÊý×é¸³Öµ
-		int index = 0;// ÓÃÓÚÈ·¶¨ÊÇµÚ¼¸¸öÆå×Ó
+		// 3)ï¿½ï¿½ï¿½ï¿½Ô­ï¿½ï¿½ï¿½é£¬ï¿½ï¿½Ï¡ï¿½ï¿½ï¿½ï¿½ï¿½é¸³Öµ
+		int index = 0;// ï¿½ï¿½ï¿½ï¿½È·ï¿½ï¿½ï¿½ÇµÚ¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		for (int i = 0; i < sparseArr.length; i++) {
 			for (int j = 0; j < sparseArr.length; j++) {
 				if (sparseArr[i][j] != 0) {
 					index++;
-					// ½«¸ÃÆå×ÓµÄÐÐi,ÁÐj,Öµ ´æ´¢ÓëÏ¡ÊèÊý×éÖÐ
+					// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Óµï¿½ï¿½ï¿½i,ï¿½ï¿½j,Öµ ï¿½æ´¢ï¿½ï¿½Ï¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 					newArr[index][0] = i;
 					newArr[index][1] = j;
 					newArr[index][2] = sparseArr[i][j];
 				}
 			}
 		}
-		// ´òÓ¡
+		// ï¿½ï¿½Ó¡
 		System.out.println("-------------------------");
-		System.out.println("Ï¡ÊèÊý×éÎª£º");
+		System.out.println("Ï¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½");
 		for (int[] is : newArr) {
 			for (int i : is) {
 				System.out.printf("%d\t", i);
@@ -61,7 +61,7 @@ public class SparseArray {
 			System.out.println();
 		}
 
-		// 3.½«Ï¡ÊèÊý×é»Ö¸´³É¶þÎ¬Êý×é
+		// 3.ï¿½ï¿½Ï¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½É¶ï¿½Î¬ï¿½ï¿½ï¿½ï¿½
 		int[][] arr = new int[newArr[0][1]][newArr[0][1]];
 		boolean flag = true;
 		for (int[] is : newArr) {
@@ -71,9 +71,9 @@ public class SparseArray {
 			}
 			arr[is[0]][is[1]] = is[2];
 		}
-		//´òÓ¡
+		//ï¿½ï¿½Ó¡
 		System.out.println("-------------------------");
-		System.out.println("Ô­Êý×éÎª£º");
+		System.out.println("Ô­ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½");
 		for (int[] is : arr) {
 			for (int i : is) {
 				System.out.printf("%d\t", i);
@@ -81,8 +81,8 @@ public class SparseArray {
 			System.out.println();
 		}
 		
-		// 4.½«Ï¡ÊèÊý×é±£´æµ½±¾µØ
-		//Ïà¶ÔÂ·¾¶£ºÄ¬ÈÏÊÇ¸ÃÏîÄ¿
+		// 4.ï¿½ï¿½Ï¡ï¿½ï¿½ï¿½ï¿½ï¿½é±£ï¿½æµ½ï¿½ï¿½ï¿½ï¿½
+		//ï¿½ï¿½ï¿½Â·ï¿½ï¿½ï¿½ï¿½Ä¬ï¿½ï¿½ï¿½Ç¸ï¿½ï¿½ï¿½Ä¿
 		BufferedWriter bd = new BufferedWriter(new FileWriter(new File("src\\basic\\SparseArray.txt")));
 		for (int[] is : newArr) {
 			for (int i = 0;i<is.length;i++) {
@@ -93,9 +93,9 @@ public class SparseArray {
 			bd.newLine();
 		}
 		bd.close();
-		// 5.½«±¾µØÊý×é»Ö¸´
+		// 5.ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½
 		BufferedReader br = new BufferedReader(new FileReader(new File("src\\basic\\SparseArray.txt")));
-		//´´½¨Ò»¸ölistÓÃÓÚ´æ´¢¶Áµ½µÄÃ¿ÐÐÊý¾Ý
+		//ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½listï¿½ï¿½ï¿½Ú´æ´¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		ArrayList<Integer[]> list = new ArrayList<>();
 		String str = null;
 		while((str = br.readLine())!=null){

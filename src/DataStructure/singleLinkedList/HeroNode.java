@@ -1,19 +1,19 @@
-package basic.singleLinkedList;
+package DataStructure.singleLinkedList;
 
 /**
- * 此类用于表示链表中的节点：包括 数据域 指针域
+ * 锟斤拷锟斤拷锟斤拷锟节憋拷示锟斤拷锟斤拷锟叫的节点：锟斤拷锟斤拷 锟斤拷锟斤拷锟斤拷 指锟斤拷锟斤拷
  * 
  * @author ZXY
  */
 public class HeroNode {
-	// 数据域
+	// 锟斤拷锟斤拷锟斤拷
 	public int id;
 	public String nickname;
 	public String name;
-	// 指针域
+	// 指锟斤拷锟斤拷
 	public HeroNode next;
 
-	// 有参构造器
+	// 锟叫参癸拷锟斤拷锟斤拷
 	public HeroNode(int id, String nickname, String name, HeroNode next) {
 		super();
 		this.id = id;
@@ -21,7 +21,7 @@ public class HeroNode {
 		this.name = name;
 		this.next = next;
 	}
-	// 无参构造器
+	// 锟睫参癸拷锟斤拷锟斤拷
 	public HeroNode() {
 		super();
 		// TODO Auto-generated constructor stub

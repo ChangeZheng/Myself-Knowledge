@@ -1,4 +1,4 @@
-package basic.singleLinkedList;
+package DataStructure.singleLinkedList;
 
 import static org.junit.Assert.*;
 

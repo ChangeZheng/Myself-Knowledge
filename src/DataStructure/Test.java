@@ -1,4 +1,4 @@
-package basic;
+package DataStructure;
 
 public class Test {
 	public static void main(String[] args) {
