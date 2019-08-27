@@ -1,4 +1,4 @@
-package DataStructure;
+package DataStructure.SparseArrayAndQueue;
 
 public class Test {
 	public static void main(String[] args) {

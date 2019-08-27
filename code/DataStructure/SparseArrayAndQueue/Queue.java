@@ -1,4 +1,4 @@
-package DataStructure;
+package DataStructure.SparseArrayAndQueue;
 
 import java.util.Scanner;
 
