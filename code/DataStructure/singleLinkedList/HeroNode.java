@@ -1,25 +1,26 @@
 package DataStructure.singleLinkedList;
 
 /**
- * 此类用于表示链表中的节点：包括 数据域 指针域
+ * 此类用于表示链表中的节点：包括 
+ * 	-数据域 
+ * 	-指针域
  * 
  * @author ZXY
  */
 public class HeroNode {
 	// 数据域
-	public int id;
+	public int no;
 	public String nickname;
 	public String name;
 	// 指针域
 	public HeroNode next;
 
 	// 有参构造器
-	public HeroNode(int id, String nickname, String name, HeroNode next) {
+	public HeroNode(int no, String nickname, String name) {
 		super();
-		this.id = id;
+		this.no = no;
 		this.nickname = nickname;
 		this.name = name;
-		this.next = next;
 	}
 	// 无参构造器
 	public HeroNode() {
@@ -29,7 +30,7 @@ public class HeroNode {
 
 	@Override
 	public String toString() {
-		return "HeroNode [id=" + id + ", nickname=" + nickname + ", name=" + name + ", next=" + next + "]";
+		return "HeroNode [no=" + no + ", nickname=" + nickname + ", name=" + name +  "]";
 	}
 
 }
